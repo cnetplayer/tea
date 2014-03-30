@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	#page_body
+		h1= title
+		ul
+			each tea, index in teas
+				- tea = tea.getInformation()
+				li= tea.name + ': ' + tea.currentStock
+	hr
+	#validation_footer
+		h2#tagline Your Total Tea Education
